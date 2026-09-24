@@ -6,5 +6,13 @@ venv/
 node_modules/
 dist/
 .DS_Store
+.claude/
+
+# Real lunar DEM is large - each person downloads their own (see README)
 data/dem.tif
-backend/test_data/
+
+# The anomaly model retrains itself automatically when missing or stale
+backend/models/
+
+# NOTE: backend/test_data/synthetic_crater_dem.tif (~1 MB) IS committed on purpose.
+# The backend falls back to it when there's no real DEM, so a fresh clone runs out of the box.
